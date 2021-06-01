@@ -11,7 +11,7 @@ Network measurement is indispensable to network operations. Two most promising m
 *  `CPU_src/`: the source code of TowerSketch on CPU platform, containing local per-flow tasks, global per-flow per-switch tasks, and throughput tests on both single-core and multi-core CPU.
 *  `FPGA_src/`: the source code of TowerSketch on FPGA platform.
 *  `P4_src/`: the source code of TowerSketch on P4 platform, and the source code of SketchINT on P4 switch.
-*  `Datasets/`: the example datasets, containing CAIDA for local tasks, and the dataset we dump from our testbed.
+*  `data/`: the datasets for test, containing CAIDA for local tasks.
 
 
 ## Requirements
