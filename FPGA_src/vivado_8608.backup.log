@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Jan  4 18:01:09 2021
+# Process ID: 8608
+# Current directory: F:/WowerSketch
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7308 F:\WowerSketch\WowerSketch.xpr
+# Log file: F:/WowerSketch/vivado.log
+# Journal file: F:/WowerSketch\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/WowerSketch/WowerSketch.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/software/vivado2017.04/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 832.828 ; gain = 146.328
+update_compile_order -fileset sources_1
+open_run synth_2 -name synth_2
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7vx690tffg1761-2
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [F:/WowerSketch/WowerSketch.srcs/constrs_1/new/top.xdc]
+Finished Parsing XDC File [F:/WowerSketch/WowerSketch.srcs/constrs_1/new/top.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:46 ; elapsed = 00:00:37 . Memory (MB): peak = 1525.547 ; gain = 679.156
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+[Mon Jan  4 18:19:42 2021] Launched synth_2...
+Run output will be captured here: F:/WowerSketch/WowerSketch.runs/synth_2/runme.log
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+[Mon Jan  4 18:42:15 2021] Launched synth_2...
+Run output will be captured here: F:/WowerSketch/WowerSketch.runs/synth_2/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Jan  4 19:38:08 2021...

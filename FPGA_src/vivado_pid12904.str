@@ -1,0 +1,128 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 12904
+License: Customer
+
+Current time: 	Wed Jan 06 09:43:53 CST 2021
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1280x720
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 4 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	E:/software/vivado2017.04/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	E:/software/vivado2017.04/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	hanyh
+User home directory: C:/Users/hanyh
+User working directory: F:/WowerSketch
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: E:/software/vivado2017.04/Vivado
+HDI_APPROOT: E:/software/vivado2017.04/Vivado/2017.4
+RDI_DATADIR: E:/software/vivado2017.04/Vivado/2017.4/data
+RDI_BINDIR: E:/software/vivado2017.04/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/hanyh/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/hanyh/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/hanyh/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	E:/software/vivado2017.04/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	F:/WowerSketch/vivado.log
+Vivado journal file location: 	F:/WowerSketch/vivado.jou
+Engine tmp dir: 	F:/WowerSketch/.Xil/Vivado-12904-LAPTOP-2DTTUL63
+
+GUI allocated memory:	139 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 509 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 60 MB (+60450kb) [00:00:10]
+// [Engine Memory]: 483 MB (+354540kb) [00:00:10]
+// TclEventType: PROJECT_OPEN_DIALOG
+// bs (cj):  Open Project : addNotify
+// Opening Vivado Project: F:\WowerSketch\WowerSketch.xpr. Version: Vivado v2017.4 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project F:/WowerSketch/WowerSketch.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project F:/WowerSketch/WowerSketch.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// HMemoryUtils.trashcanNow. Engine heap size: 537 MB. GUI used memory: 33 MB. Current time: 1/6/21 9:43:55 AM CST
+// [Engine Memory]: 541 MB (+35900kb) [00:00:16]
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 569 MB (+926kb) [00:00:19]
+// [Engine Memory]: 603 MB (+6002kb) [00:00:20]
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/software/vivado2017.04/Vivado/2017.4/data/ip'. 
+// Project name: WowerSketch; location: F:/WowerSketch; part: xc7vx690tffg1761-2
+// Tcl Message: open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 768.520 ; gain = 93.887 
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 69 MB (+6301kb) [00:02:44]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 234 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cj)
+// TclEventType: DG_GRAPH_GENERATED
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_2 
+// f (cj): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bs (cj):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cj)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs synth_2 -jobs 4 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Jan  6 09:48:01 2021] Launched synth_2... Run output will be captured here: F:/WowerSketch/WowerSketch.runs/synth_2/runme.log 
+dismissDialog("Starting Design Runs"); // bs (cj)
+// [GUI Memory]: 73 MB (+349kb) [00:04:52]
+// [GUI Memory]: 77 MB (+29kb) [00:06:08]
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.

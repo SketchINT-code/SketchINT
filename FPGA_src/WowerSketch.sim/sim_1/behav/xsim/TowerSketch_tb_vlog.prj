@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../WowerSketch.srcs/sources_1/ip/ram_32_16k/sim/ram_32_16k.v" \
+"../../../../WowerSketch.srcs/sources_1/ip/ram_16_32k/sim/ram_16_32k.v" \
+"../../../../WowerSketch.srcs/sources_1/ip/ram_8_64k/sim/ram_8_64k.v" \
+"C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/CRC32_D64.v" \
+"../../../../WowerSketch.srcs/sources_1/new/TowerSketch.v" \
+"C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/crc32_64bit_gen.v" \
+"../../../../WowerSketch.srcs/sim_1/new/TowerSketch_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

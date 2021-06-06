@@ -1,0 +1,670 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Jan  6 10:53:28 2021
+# Process ID: 2596
+# Current directory: F:/TowerSketch
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7540 F:\TowerSketch\WowerSketch.xpr
+# Log file: F:/TowerSketch/vivado.log
+# Journal file: F:/TowerSketch\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/TowerSketch/WowerSketch.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/software/vivado2017.04/Vivado/2017.4/data/ip'.
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'open_project' was cancelled
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jan  6 10:54:06 2021...
+s 4
+[Wed Jan  6 10:53:57 2021] Launched synth_2...
+Run output will be captured here: F:/TowerSketch/WowerSketch.runs/synth_2/runme.log
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+[Wed Jan  6 10:56:53 2021] Launched synth_2...
+Run output will be captured here: F:/TowerSketch/WowerSketch.runs/synth_2/runme.log
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+[Wed Jan  6 10:58:28 2021] Launched synth_2...
+Run output will be captured here: F:/TowerSketch/WowerSketch.runs/synth_2/runme.log
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+[Wed Jan  6 10:59:34 2021] Launched synth_2...
+Run output will be captured here: F:/TowerSketch/WowerSketch.runs/synth_2/runme.log
+open_run synth_2 -name synth_2
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7vx690tffg1761-2
+INFO: [Netlist 29-17] Analyzing 179 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [F:/TowerSketch/WowerSketch.srcs/constrs_1/new/top.xdc]
+Finished Parsing XDC File [F:/TowerSketch/WowerSketch.srcs/constrs_1/new/top.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:46 ; elapsed = 00:00:34 . Memory (MB): peak = 1582.156 ; gain = 719.074
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary: Time (s): cpu = 00:00:30 ; elapsed = 00:00:24 . Memory (MB): peak = 2300.547 ; gain = 718.391
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/software/vivado2017.04/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'TowerSketch_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj TowerSketch_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_32_16k/sim/ram_32_16k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_32_16k
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_16_32k/sim/ram_16_32k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_16_32k
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_8_64k/sim/ram_8_64k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_8_64k
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TowerSketch
+INFO: [VRFC 10-2458] undeclared symbol clkb_layer1, assumed default net type wire [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:369]
+INFO: [VRFC 10-2458] undeclared symbol clkb_layer2, assumed default net type wire [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:385]
+INFO: [VRFC 10-2458] undeclared symbol clkb_layer3, assumed default net type wire [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:401]
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sim_1/new/TowerSketch_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TowerSketch_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: E:/software/vivado2017.04/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 2956274690574d249899dc96d5d33187 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_1 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot TowerSketch_tb_behav xil_defaultlib.TowerSketch_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 15 differs from formal bit length 14 for port addra [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:398]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port dina [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:399]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port douta [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:400]
+WARNING: [VRFC 10-278] actual bit length 15 differs from formal bit length 14 for port addrb [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:404]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port dinb [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:405]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port doutb [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:406]
+WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2419]
+WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2420]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/CRC32_D64.v" Line 19. Module CRC32_D64 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/CRC32_D64.v" Line 19. Module CRC32_D64 doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/CRC32_D64.v" Line 19. Module CRC32_D64 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.CRC32_D64
+Compiling module xil_defaultlib.crc32_64bit_gen
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_axi_regs_fwd_v8_4(C_DATA...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_ELABORATION...
+Compiling module xil_defaultlib.ram_8_64k
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_ELABORATION...
+Compiling module xil_defaultlib.ram_16_32k
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_ELABORATION...
+Compiling module xil_defaultlib.ram_32_16k
+Compiling module xil_defaultlib.TowerSketch
+Compiling module xil_defaultlib.TowerSketch_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot TowerSketch_tb_behav
+
+****** Webtalk v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim/xsim.dir/TowerSketch_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Jan  6 11:11:12 2021...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 2311.547 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '14' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "TowerSketch_tb_behav -key {Behavioral:sim_1:Functional:TowerSketch_tb} -tclbatch {TowerSketch_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+source TowerSketch_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Block Memory Generator module TowerSketch_tb.TowerSketch.counter_ram_layer1.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module TowerSketch_tb.TowerSketch.counter_ram_layer2.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module TowerSketch_tb.TowerSketch.counter_ram_layer3.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'TowerSketch_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:24 . Memory (MB): peak = 2331.363 ; gain = 19.816
+add_wave {{/TowerSketch_tb/TowerSketch/sys_clk}} {{/TowerSketch_tb/TowerSketch/rst_n}} {{/TowerSketch_tb/TowerSketch/e}} {{/TowerSketch_tb/TowerSketch/e_valid}} 
+add_wave {{/TowerSketch_tb/TowerSketch/ena_layer1}} {{/TowerSketch_tb/TowerSketch/wea_layer1}} {{/TowerSketch_tb/TowerSketch/addra_layer1}} {{/TowerSketch_tb/TowerSketch/dina_layer1}} {{/TowerSketch_tb/TowerSketch/douta_layer1}} {{/TowerSketch_tb/TowerSketch/enb_layer1}} {{/TowerSketch_tb/TowerSketch/web_layer1}} {{/TowerSketch_tb/TowerSketch/addrb_layer1}} {{/TowerSketch_tb/TowerSketch/dinb_layer1}} {{/TowerSketch_tb/TowerSketch/doutb_layer1}} {{/TowerSketch_tb/TowerSketch/douta_layer1_reg}} {{/TowerSketch_tb/TowerSketch/hash_1_valid_0}} {{/TowerSketch_tb/TowerSketch/hash_1_valid_1}} {{/TowerSketch_tb/TowerSketch/hash_1_valid_2}} {{/TowerSketch_tb/TowerSketch/hash_1_valid_3}} {{/TowerSketch_tb/TowerSketch/hash_1_0}} {{/TowerSketch_tb/TowerSketch/hash_1_1}} {{/TowerSketch_tb/TowerSketch/hash_1_2}} {{/TowerSketch_tb/TowerSketch/hash_1_3}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 200 ns
+Block Memory Generator module TowerSketch_tb.TowerSketch.counter_ram_layer1.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module TowerSketch_tb.TowerSketch.counter_ram_layer2.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module TowerSketch_tb.TowerSketch.counter_ram_layer3.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/software/vivado2017.04/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'TowerSketch_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj TowerSketch_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_32_16k/sim/ram_32_16k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_32_16k
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_16_32k/sim/ram_16_32k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_16_32k
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_8_64k/sim/ram_8_64k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_8_64k
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/CRC32_D64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CRC32_D64
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TowerSketch
+INFO: [VRFC 10-2458] undeclared symbol clkb_layer1, assumed default net type wire [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:369]
+INFO: [VRFC 10-2458] undeclared symbol clkb_layer2, assumed default net type wire [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:385]
+INFO: [VRFC 10-2458] undeclared symbol clkb_layer3, assumed default net type wire [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:401]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/crc32_64bit_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crc32_64bit_gen
+WARNING: [VRFC 10-1315] redeclaration of ansi port crcvalid is not allowed [C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/crc32_64bit_gen.v:12]
+WARNING: [VRFC 10-1315] redeclaration of ansi port checksum is not allowed [C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/crc32_64bit_gen.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sim_1/new/TowerSketch_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TowerSketch_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: E:/software/vivado2017.04/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 2956274690574d249899dc96d5d33187 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_1 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot TowerSketch_tb_behav xil_defaultlib.TowerSketch_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 15 differs from formal bit length 14 for port addra [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:398]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port dina [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:399]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port douta [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:400]
+WARNING: [VRFC 10-278] actual bit length 15 differs from formal bit length 14 for port addrb [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:404]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port dinb [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:405]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port doutb [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:406]
+WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2419]
+WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2420]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.CRC32_D64
+Compiling module xil_defaultlib.crc32_64bit_gen
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_axi_regs_fwd_v8_4(C_DATA...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_ELABORATION...
+Compiling module xil_defaultlib.ram_8_64k
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_ELABORATION...
+Compiling module xil_defaultlib.ram_16_32k
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_ELABORATION...
+Compiling module xil_defaultlib.ram_32_16k
+Compiling module xil_defaultlib.TowerSketch
+Compiling module xil_defaultlib.TowerSketch_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot TowerSketch_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2338.215 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2338.215 ; gain = 0.000
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+Block Memory Generator module TowerSketch_tb.TowerSketch.counter_ram_layer1.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module TowerSketch_tb.TowerSketch.counter_ram_layer2.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module TowerSketch_tb.TowerSketch.counter_ram_layer3.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:16 . Memory (MB): peak = 2338.215 ; gain = 0.000
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/software/vivado2017.04/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'TowerSketch_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj TowerSketch_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_32_16k/sim/ram_32_16k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_32_16k
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_16_32k/sim/ram_16_32k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_16_32k
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_8_64k/sim/ram_8_64k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_8_64k
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/CRC32_D64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CRC32_D64
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TowerSketch
+INFO: [VRFC 10-2458] undeclared symbol clkb_layer1, assumed default net type wire [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:369]
+INFO: [VRFC 10-2458] undeclared symbol clkb_layer2, assumed default net type wire [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:385]
+INFO: [VRFC 10-2458] undeclared symbol clkb_layer3, assumed default net type wire [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:401]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/crc32_64bit_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crc32_64bit_gen
+WARNING: [VRFC 10-1315] redeclaration of ansi port crcvalid is not allowed [C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/crc32_64bit_gen.v:12]
+WARNING: [VRFC 10-1315] redeclaration of ansi port checksum is not allowed [C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/crc32_64bit_gen.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sim_1/new/TowerSketch_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TowerSketch_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: E:/software/vivado2017.04/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 2956274690574d249899dc96d5d33187 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_1 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot TowerSketch_tb_behav xil_defaultlib.TowerSketch_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 15 differs from formal bit length 14 for port addra [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:398]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port dina [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:399]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port douta [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:400]
+WARNING: [VRFC 10-278] actual bit length 15 differs from formal bit length 14 for port addrb [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:404]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port dinb [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:405]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port doutb [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:406]
+WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2419]
+WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2420]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.CRC32_D64
+Compiling module xil_defaultlib.crc32_64bit_gen
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_axi_regs_fwd_v8_4(C_DATA...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_ELABORATION...
+Compiling module xil_defaultlib.ram_8_64k
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_ELABORATION...
+Compiling module xil_defaultlib.ram_16_32k
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_ELABORATION...
+Compiling module xil_defaultlib.ram_32_16k
+Compiling module xil_defaultlib.TowerSketch
+Compiling module xil_defaultlib.TowerSketch_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot TowerSketch_tb_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 2341.047 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '9' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 2341.047 ; gain = 0.000
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+Block Memory Generator module TowerSketch_tb.TowerSketch.counter_ram_layer1.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module TowerSketch_tb.TowerSketch.counter_ram_layer2.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module TowerSketch_tb.TowerSketch.counter_ram_layer3.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:15 . Memory (MB): peak = 2341.367 ; gain = 1.023
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/software/vivado2017.04/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'TowerSketch_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj TowerSketch_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_32_16k/sim/ram_32_16k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_32_16k
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_16_32k/sim/ram_16_32k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_16_32k
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_8_64k/sim/ram_8_64k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_8_64k
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/CRC32_D64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CRC32_D64
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TowerSketch
+INFO: [VRFC 10-2458] undeclared symbol clkb_layer1, assumed default net type wire [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:369]
+INFO: [VRFC 10-2458] undeclared symbol clkb_layer2, assumed default net type wire [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:385]
+INFO: [VRFC 10-2458] undeclared symbol clkb_layer3, assumed default net type wire [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:401]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/crc32_64bit_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crc32_64bit_gen
+WARNING: [VRFC 10-1315] redeclaration of ansi port crcvalid is not allowed [C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/crc32_64bit_gen.v:12]
+WARNING: [VRFC 10-1315] redeclaration of ansi port checksum is not allowed [C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/crc32_64bit_gen.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sim_1/new/TowerSketch_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TowerSketch_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: E:/software/vivado2017.04/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 2956274690574d249899dc96d5d33187 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_1 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot TowerSketch_tb_behav xil_defaultlib.TowerSketch_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 15 differs from formal bit length 14 for port addra [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:398]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port dina [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:399]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port douta [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:400]
+WARNING: [VRFC 10-278] actual bit length 15 differs from formal bit length 14 for port addrb [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:404]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port dinb [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:405]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port doutb [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:406]
+WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2419]
+WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2420]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.CRC32_D64
+Compiling module xil_defaultlib.crc32_64bit_gen
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_axi_regs_fwd_v8_4(C_DATA...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_ELABORATION...
+Compiling module xil_defaultlib.ram_8_64k
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_ELABORATION...
+Compiling module xil_defaultlib.ram_16_32k
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_ELABORATION...
+Compiling module xil_defaultlib.ram_32_16k
+Compiling module xil_defaultlib.TowerSketch
+Compiling module xil_defaultlib.TowerSketch_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot TowerSketch_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2343.594 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2343.594 ; gain = 0.000
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+Block Memory Generator module TowerSketch_tb.TowerSketch.counter_ram_layer1.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module TowerSketch_tb.TowerSketch.counter_ram_layer2.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module TowerSketch_tb.TowerSketch.counter_ram_layer3.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 2345.551 ; gain = 1.957
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/software/vivado2017.04/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'TowerSketch_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj TowerSketch_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_32_16k/sim/ram_32_16k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_32_16k
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_16_32k/sim/ram_16_32k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_16_32k
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_8_64k/sim/ram_8_64k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_8_64k
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/CRC32_D64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CRC32_D64
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TowerSketch
+INFO: [VRFC 10-2458] undeclared symbol clkb_layer1, assumed default net type wire [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:387]
+INFO: [VRFC 10-2458] undeclared symbol clkb_layer2, assumed default net type wire [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:403]
+INFO: [VRFC 10-2458] undeclared symbol clkb_layer3, assumed default net type wire [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:419]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/crc32_64bit_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crc32_64bit_gen
+WARNING: [VRFC 10-1315] redeclaration of ansi port crcvalid is not allowed [C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/crc32_64bit_gen.v:12]
+WARNING: [VRFC 10-1315] redeclaration of ansi port checksum is not allowed [C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/crc32_64bit_gen.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sim_1/new/TowerSketch_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TowerSketch_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: E:/software/vivado2017.04/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 2956274690574d249899dc96d5d33187 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_1 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot TowerSketch_tb_behav xil_defaultlib.TowerSketch_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 15 differs from formal bit length 14 for port addra [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:416]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port dina [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:417]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port douta [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:418]
+WARNING: [VRFC 10-278] actual bit length 15 differs from formal bit length 14 for port addrb [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:422]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port dinb [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:423]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port doutb [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:424]
+WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2419]
+WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2420]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.CRC32_D64
+Compiling module xil_defaultlib.crc32_64bit_gen
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_axi_regs_fwd_v8_4(C_DATA...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_ELABORATION...
+Compiling module xil_defaultlib.ram_8_64k
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_ELABORATION...
+Compiling module xil_defaultlib.ram_16_32k
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_ELABORATION...
+Compiling module xil_defaultlib.ram_32_16k
+Compiling module xil_defaultlib.TowerSketch
+Compiling module xil_defaultlib.TowerSketch_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot TowerSketch_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2349.461 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2349.461 ; gain = 0.000
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+Block Memory Generator module TowerSketch_tb.TowerSketch.counter_ram_layer1.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module TowerSketch_tb.TowerSketch.counter_ram_layer2.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module TowerSketch_tb.TowerSketch.counter_ram_layer3.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 2351.191 ; gain = 1.766
+relaunch_sim
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/software/vivado2017.04/Vivado/2017.4/data/xsim/ip/xsim_ip.ini' copied to run dir:'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'TowerSketch_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj TowerSketch_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_32_16k/sim/ram_32_16k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_32_16k
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_16_32k/sim/ram_16_32k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_16_32k
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_8_64k/sim/ram_8_64k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_8_64k
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/CRC32_D64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CRC32_D64
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TowerSketch
+INFO: [VRFC 10-2458] undeclared symbol clkb_layer1, assumed default net type wire [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:387]
+INFO: [VRFC 10-2458] undeclared symbol clkb_layer2, assumed default net type wire [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:403]
+INFO: [VRFC 10-2458] undeclared symbol clkb_layer3, assumed default net type wire [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:419]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/crc32_64bit_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module crc32_64bit_gen
+WARNING: [VRFC 10-1315] redeclaration of ansi port crcvalid is not allowed [C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/crc32_64bit_gen.v:12]
+WARNING: [VRFC 10-1315] redeclaration of ansi port checksum is not allowed [C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/crc32_64bit_gen.v:15]
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/TowerSketch/WowerSketch.srcs/sim_1/new/TowerSketch_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TowerSketch_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/TowerSketch/WowerSketch.sim/sim_1/behav/xsim'
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: E:/software/vivado2017.04/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 2956274690574d249899dc96d5d33187 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_1 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot TowerSketch_tb_behav xil_defaultlib.TowerSketch_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 15 differs from formal bit length 14 for port addra [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:416]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port dina [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:417]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port douta [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:418]
+WARNING: [VRFC 10-278] actual bit length 15 differs from formal bit length 14 for port addrb [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:422]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port dinb [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:423]
+WARNING: [VRFC 10-278] actual bit length 16 differs from formal bit length 32 for port doutb [F:/TowerSketch/WowerSketch.srcs/sources_1/new/TowerSketch.v:424]
+WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2419]
+WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2420]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.CRC32_D64
+Compiling module xil_defaultlib.crc32_64bit_gen
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_axi_regs_fwd_v8_4(C_DATA...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_ELABORATION...
+Compiling module xil_defaultlib.ram_8_64k
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_ELABORATION...
+Compiling module xil_defaultlib.ram_16_32k
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_ELABORATION...
+Compiling module xil_defaultlib.ram_32_16k
+Compiling module xil_defaultlib.TowerSketch
+Compiling module xil_defaultlib.TowerSketch_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot TowerSketch_tb_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 2352.641 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 2352.641 ; gain = 0.000
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+Block Memory Generator module TowerSketch_tb.TowerSketch.counter_ram_layer1.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module TowerSketch_tb.TowerSketch.counter_ram_layer2.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module TowerSketch_tb.TowerSketch.counter_ram_layer3.inst.native_mem_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 2353.078 ; gain = 0.438
+reset_run synth_2
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory F:/TowerSketch/WowerSketch.runs/synth_2
+
+launch_runs synth_2 -jobs 4
+[Wed Jan  6 11:32:07 2021] Launched synth_2...
+Run output will be captured here: F:/TowerSketch/WowerSketch.runs/synth_2/runme.log
+open_example_project -force -dir F:/TowerSketch [get_ips  ram_8_64k]
+INFO: [IP_Flow 19-1686] Generating 'Examples' target for IP 'ram_8_64k'...
+open_example_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:55 . Memory (MB): peak = 2357.625 ; gain = 0.000
+close_design
+open_run synth_2 -name synth_2
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7vx690tffg1761-2
+INFO: [Netlist 29-17] Analyzing 187 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [F:/TowerSketch/WowerSketch.srcs/constrs_1/new/top.xdc]
+Finished Parsing XDC File [F:/TowerSketch/WowerSketch.srcs/constrs_1/new/top.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 2357.625 ; gain = 0.000
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+refresh_design
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [F:/TowerSketch/WowerSketch.srcs/constrs_1/new/top.xdc]
+Finished Parsing XDC File [F:/TowerSketch/WowerSketch.srcs/constrs_1/new/top.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2442.648 ; gain = 4.008
+reset_run synth_2
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory F:/TowerSketch/WowerSketch.runs/synth_2
+
+launch_runs synth_2 -jobs 4
+[Wed Jan  6 11:42:18 2021] Launched synth_2...
+Run output will be captured here: F:/TowerSketch/WowerSketch.runs/synth_2/runme.log
+close_design
+open_run synth_2 -name synth_2
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7vx690tffg1761-2
+INFO: [Netlist 29-17] Analyzing 187 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.4
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [F:/TowerSketch/WowerSketch.srcs/constrs_1/new/top.xdc]
+Finished Parsing XDC File [F:/TowerSketch/WowerSketch.srcs/constrs_1/new/top.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 2442.648 ; gain = 0.000
+report_utilization -name utilization_1
+report_utilization: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2442.648 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2442.648 ; gain = 0.000
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jan  6 12:12:55 2021...

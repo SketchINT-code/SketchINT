@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sun Jan  3 20:50:59 2021
+# Process ID: 9460
+# Current directory: C:/Users/hanyh/Desktop/WowerSketch/WowerSketch.runs/synth_1
+# Command line: vivado.exe -log TowerSketch.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TowerSketch.tcl
+# Log file: C:/Users/hanyh/Desktop/WowerSketch/WowerSketch.runs/synth_1/TowerSketch.vds
+# Journal file: C:/Users/hanyh/Desktop/WowerSketch/WowerSketch.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source TowerSketch.tcl -notrace

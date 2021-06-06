@@ -1,0 +1,18 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "f:/TowerSketch/ram_8_64k_ex/imports/addr_gen.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ADDR_GEN
+INFO: [VRFC 10-163] Analyzing VHDL file "f:/TowerSketch/ram_8_64k_ex/imports/bmg_tb_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "f:/TowerSketch/ram_8_64k_ex/imports/bmg_stim_gen.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity REGISTER_LOGIC_TDP
+INFO: [VRFC 10-307] analyzing entity BMG_STIM_GEN
+INFO: [VRFC 10-163] Analyzing VHDL file "f:/TowerSketch/ram_8_64k_ex/imports/checker.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CHECKER
+INFO: [VRFC 10-163] Analyzing VHDL file "f:/TowerSketch/ram_8_64k_ex/imports/data_gen.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity DATA_GEN
+INFO: [VRFC 10-163] Analyzing VHDL file "f:/TowerSketch/ram_8_64k_ex/imports/ram_8_64k_exdes.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ram_8_64k_exdes
+INFO: [VRFC 10-163] Analyzing VHDL file "f:/TowerSketch/ram_8_64k_ex/imports/ram_8_64k_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ram_8_64k_wrapper
+INFO: [VRFC 10-163] Analyzing VHDL file "f:/TowerSketch/ram_8_64k_ex/imports/random.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity RANDOM
+INFO: [VRFC 10-163] Analyzing VHDL file "f:/TowerSketch/ram_8_64k_ex/imports/ram_8_64k_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ram_8_64k_tb

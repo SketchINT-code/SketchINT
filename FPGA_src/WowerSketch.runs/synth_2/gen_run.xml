@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_2" LaunchPart="xc7vx690tffg1761-2" LaunchTime="1609904537">
+  <File Type="PA-TCL" Name="TowerSketch.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="TowerSketch_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="TowerSketch_reports.tcl"/>
+  <File Type="RDS-RDS" Name="TowerSketch.vds"/>
+  <File Type="RDS-UTIL" Name="TowerSketch_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="TowerSketch_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="TowerSketch.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="TowerSketch_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="TowerSketch_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/ram_32_16k/ram_32_16k.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/ram_16_32k/ram_16_32k.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/ram_8_64k/ram_8_64k.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/CRC32_D64.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="C:/Users/hanyh/Desktop/insert/insert.srcs/sources_1/new/crc32_64bit_gen.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/TowerSketch.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="TowerSketch"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/top.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

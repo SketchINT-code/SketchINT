@@ -1,0 +1,15 @@
+0.6
+2017.4
+Dec 15 2017
+21:07:18
+f:/TowerSketch/ram_8_64k_ex/imports/addr_gen.vhd,1609904256,vhdl,,,,addr_gen,,,,,,,,
+f:/TowerSketch/ram_8_64k_ex/imports/bmg_stim_gen.vhd,1609904256,vhdl,,,,bmg_stim_gen;register_logic_tdp,,,,,,,,
+f:/TowerSketch/ram_8_64k_ex/imports/bmg_tb_pkg.vhd,1609904255,vhdl,f:/TowerSketch/ram_8_64k_ex/imports/bmg_stim_gen.vhd;f:/TowerSketch/ram_8_64k_ex/imports/checker.vhd;f:/TowerSketch/ram_8_64k_ex/imports/data_gen.vhd;f:/TowerSketch/ram_8_64k_ex/imports/ram_8_64k_exdes.vhd,,,bmg_tb_pkg,,,,,,,,
+f:/TowerSketch/ram_8_64k_ex/imports/checker.vhd,1609904256,vhdl,,,,checker,,,,,,,,
+f:/TowerSketch/ram_8_64k_ex/imports/data_gen.vhd,1609904256,vhdl,,,,data_gen,,,,,,,,
+f:/TowerSketch/ram_8_64k_ex/imports/ram_8_64k_exdes.vhd,1609904256,vhdl,,,,ram_8_64k_exdes,,,,,,,,
+f:/TowerSketch/ram_8_64k_ex/imports/ram_8_64k_tb.vhd,1609904257,vhdl,,,,ram_8_64k_tb,,,,,,,,
+f:/TowerSketch/ram_8_64k_ex/imports/ram_8_64k_wrapper.vhd,1609904255,vhdl,,,,ram_8_64k_wrapper,,,,,,,,
+f:/TowerSketch/ram_8_64k_ex/imports/random.vhd,1609904256,vhdl,,,,random,,,,,,,,
+f:/TowerSketch/ram_8_64k_ex/ram_8_64k_ex.sim/sim_1/behav/xsim/glbl.v,1513215259,verilog,,,,glbl,,,,,,,,
+f:/TowerSketch/ram_8_64k_ex/ram_8_64k_ex.srcs/sources_1/ip/ram_8_64k/sim/ram_8_64k.v,1609898426,verilog,,,,ram_8_64k,,,,,,,,

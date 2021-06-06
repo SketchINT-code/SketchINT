@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Jan  4 17:47:56 2021
+# Process ID: 1300
+# Current directory: F:/WowerSketch
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2080 F:\WowerSketch\WowerSketch.xpr
+# Log file: F:/WowerSketch/vivado.log
+# Journal file: F:/WowerSketch\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/WowerSketch/WowerSketch.xpr
+update_compile_order -fileset sources_1
+open_run synth_2 -name synth_2
+reset_run synth_2
+launch_runs impl_2 -jobs 4
+wait_on_run impl_2
+refresh_design
+synth_design -rtl -name rtl_1
+set_property package_pin "" [get_ports [list  {e[34]}]]
+set_property package_pin "" [get_ports [list  {e[54]}]]
+set_property package_pin "" [get_ports [list  rst_n]]
+set_property package_pin "" [get_ports [list  rst_n]]
+set_property package_pin "" [get_ports [list  {e[34]}]]
+set_property package_pin "" [get_ports [list  {e[34]}]]
+current_design synth_2
+current_design rtl_1

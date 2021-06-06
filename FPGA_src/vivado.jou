@@ -1,0 +1,55 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Jan  6 10:53:28 2021
+# Process ID: 2596
+# Current directory: F:/TowerSketch
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7540 F:\TowerSketch\WowerSketch.xpr
+# Log file: F:/TowerSketch/vivado.log
+# Journal file: F:/TowerSketch\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/TowerSketch/WowerSketch.xpr
+update_compile_order -fileset sources_1
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+open_run synth_2 -name synth_2
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+launch_simulation
+source TowerSketch_tb.tcl
+add_wave {{/TowerSketch_tb/TowerSketch/sys_clk}} {{/TowerSketch_tb/TowerSketch/rst_n}} {{/TowerSketch_tb/TowerSketch/e}} {{/TowerSketch_tb/TowerSketch/e_valid}} 
+add_wave {{/TowerSketch_tb/TowerSketch/ena_layer1}} {{/TowerSketch_tb/TowerSketch/wea_layer1}} {{/TowerSketch_tb/TowerSketch/addra_layer1}} {{/TowerSketch_tb/TowerSketch/dina_layer1}} {{/TowerSketch_tb/TowerSketch/douta_layer1}} {{/TowerSketch_tb/TowerSketch/enb_layer1}} {{/TowerSketch_tb/TowerSketch/web_layer1}} {{/TowerSketch_tb/TowerSketch/addrb_layer1}} {{/TowerSketch_tb/TowerSketch/dinb_layer1}} {{/TowerSketch_tb/TowerSketch/doutb_layer1}} {{/TowerSketch_tb/TowerSketch/douta_layer1_reg}} {{/TowerSketch_tb/TowerSketch/hash_1_valid_0}} {{/TowerSketch_tb/TowerSketch/hash_1_valid_1}} {{/TowerSketch_tb/TowerSketch/hash_1_valid_2}} {{/TowerSketch_tb/TowerSketch/hash_1_valid_3}} {{/TowerSketch_tb/TowerSketch/hash_1_0}} {{/TowerSketch_tb/TowerSketch/hash_1_1}} {{/TowerSketch_tb/TowerSketch/hash_1_2}} {{/TowerSketch_tb/TowerSketch/hash_1_3}} 
+restart
+run 200 ns
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+open_example_project -force -dir F:/TowerSketch [get_ips  ram_8_64k]
+close_design
+open_run synth_2 -name synth_2
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+refresh_design
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+close_design
+open_run synth_2 -name synth_2
+report_utilization -name utilization_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+close_sim

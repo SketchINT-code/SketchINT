@@ -1,0 +1,14 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../imports/addr_gen.vhd" \
+"../../../../imports/bmg_tb_pkg.vhd" \
+"../../../../imports/bmg_stim_gen.vhd" \
+"../../../../imports/checker.vhd" \
+"../../../../imports/data_gen.vhd" \
+"../../../../imports/ram_8_64k_exdes.vhd" \
+"../../../../imports/ram_8_64k_wrapper.vhd" \
+"../../../../imports/random.vhd" \
+"../../../../imports/ram_8_64k_tb.vhd" \
+
+# Do not sort compile order
+nosort

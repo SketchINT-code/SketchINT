@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Jan  6 09:43:15 2021
+# Process ID: 12904
+# Current directory: F:/WowerSketch
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12732 F:\WowerSketch\WowerSketch.xpr
+# Log file: F:/WowerSketch/vivado.log
+# Journal file: F:/WowerSketch\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/WowerSketch/WowerSketch.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/software/vivado2017.04/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 768.520 ; gain = 93.887
+update_compile_order -fileset sources_1
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+[Wed Jan  6 09:48:01 2021] Launched synth_2...
+Run output will be captured here: F:/WowerSketch/WowerSketch.runs/synth_2/runme.log

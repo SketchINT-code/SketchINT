@@ -1,0 +1,136 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Jan  6 09:56:13 2021
+# Process ID: 7496
+# Current directory: F:/TowerSketch
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3360 F:\TowerSketch\WowerSketch.xpr
+# Log file: F:/TowerSketch/vivado.log
+# Journal file: F:/TowerSketch\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/TowerSketch/WowerSketch.xpr
+INFO: [Project 1-313] Project file moved from 'F:/WowerSketch' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/software/vivado2017.04/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:10 . Memory (MB): peak = 814.430 ; gain = 85.203
+update_compile_order -fileset sources_1
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-2
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name ram_8_64k -dir f:/TowerSketch/WowerSketch.srcs/sources_1/ip
+set_property -dict [list CONFIG.Component_Name {ram_8_64k} CONFIG.Memory_Type {True_Dual_Port_RAM} CONFIG.Write_Width_A {8} CONFIG.Write_Depth_A {65536} CONFIG.Read_Width_A {8} CONFIG.Write_Width_B {8} CONFIG.Read_Width_B {8} CONFIG.Enable_B {Use_ENB_Pin} CONFIG.Register_PortB_Output_of_Memory_Primitives {true} CONFIG.Port_B_Clock {100} CONFIG.Port_B_Write_Rate {50} CONFIG.Port_B_Enable_Rate {100}] [get_ips ram_8_64k]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ram_8_64k' to 'ram_8_64k' is not allowed and is ignored.
+generate_target {instantiation_template} [get_files f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_8_64k/ram_8_64k.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ram_8_64k'...
+update_compile_order -fileset sources_1
+set_property generate_synth_checkpoint false [get_files  f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_8_64k/ram_8_64k.xci]
+generate_target all [get_files  f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_8_64k/ram_8_64k.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ram_8_64k'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ram_8_64k'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ram_8_64k'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'ram_8_64k'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ram_8_64k'...
+export_ip_user_files -of_objects [get_files f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_8_64k/ram_8_64k.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_8_64k/ram_8_64k.xci] -directory F:/TowerSketch/WowerSketch.ip_user_files/sim_scripts -ip_user_files_dir F:/TowerSketch/WowerSketch.ip_user_files -ipstatic_source_dir F:/TowerSketch/WowerSketch.ip_user_files/ipstatic -lib_map_path [list {modelsim=F:/TowerSketch/WowerSketch.cache/compile_simlib/modelsim} {questa=F:/TowerSketch/WowerSketch.cache/compile_simlib/questa} {riviera=F:/TowerSketch/WowerSketch.cache/compile_simlib/riviera} {activehdl=F:/TowerSketch/WowerSketch.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name ram_16_31768 -dir f:/TowerSketch/WowerSketch.srcs/sources_1/ip
+set_property -dict [list CONFIG.Component_Name {ram_16_31768} CONFIG.Memory_Type {True_Dual_Port_RAM} CONFIG.Write_Depth_A {32768} CONFIG.Enable_B {Use_ENB_Pin} CONFIG.Register_PortB_Output_of_Memory_Primitives {true} CONFIG.Port_B_Clock {100} CONFIG.Port_B_Write_Rate {50} CONFIG.Port_B_Enable_Rate {100}] [get_ips ram_16_31768]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ram_16_31768' to 'ram_16_31768' is not allowed and is ignored.
+generate_target {instantiation_template} [get_files f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_16_31768/ram_16_31768.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ram_16_31768'...
+update_compile_order -fileset sources_1
+set_property generate_synth_checkpoint false [get_files  f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_16_31768/ram_16_31768.xci]
+generate_target all [get_files  f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_16_31768/ram_16_31768.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ram_16_31768'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ram_16_31768'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ram_16_31768'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'ram_16_31768'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ram_16_31768'...
+export_ip_user_files -of_objects [get_files f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_16_31768/ram_16_31768.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_16_31768/ram_16_31768.xci] -directory F:/TowerSketch/WowerSketch.ip_user_files/sim_scripts -ip_user_files_dir F:/TowerSketch/WowerSketch.ip_user_files -ipstatic_source_dir F:/TowerSketch/WowerSketch.ip_user_files/ipstatic -lib_map_path [list {modelsim=F:/TowerSketch/WowerSketch.cache/compile_simlib/modelsim} {questa=F:/TowerSketch/WowerSketch.cache/compile_simlib/questa} {riviera=F:/TowerSketch/WowerSketch.cache/compile_simlib/riviera} {activehdl=F:/TowerSketch/WowerSketch.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name ram_32_16384 -dir f:/TowerSketch/WowerSketch.srcs/sources_1/ip
+set_property -dict [list CONFIG.Component_Name {ram_32_16384} CONFIG.Memory_Type {True_Dual_Port_RAM} CONFIG.Write_Width_A {32} CONFIG.Write_Depth_A {16384} CONFIG.Read_Width_A {32} CONFIG.Write_Width_B {32} CONFIG.Read_Width_B {32} CONFIG.Enable_B {Use_ENB_Pin} CONFIG.Register_PortB_Output_of_Memory_Primitives {true} CONFIG.Port_A_Write_Rate {50} CONFIG.Port_B_Clock {100} CONFIG.Port_B_Write_Rate {50} CONFIG.Port_B_Enable_Rate {100}] [get_ips ram_32_16384]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ram_32_16384' to 'ram_32_16384' is not allowed and is ignored.
+generate_target {instantiation_template} [get_files f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_32_16384/ram_32_16384.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ram_32_16384'...
+set_property generate_synth_checkpoint false [get_files  f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_32_16384/ram_32_16384.xci]
+generate_target all [get_files  f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_32_16384/ram_32_16384.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ram_32_16384'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ram_32_16384'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ram_32_16384'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'ram_32_16384'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ram_32_16384'...
+export_ip_user_files -of_objects [get_files f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_32_16384/ram_32_16384.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_32_16384/ram_32_16384.xci] -directory F:/TowerSketch/WowerSketch.ip_user_files/sim_scripts -ip_user_files_dir F:/TowerSketch/WowerSketch.ip_user_files -ipstatic_source_dir F:/TowerSketch/WowerSketch.ip_user_files/ipstatic -lib_map_path [list {modelsim=F:/TowerSketch/WowerSketch.cache/compile_simlib/modelsim} {questa=F:/TowerSketch/WowerSketch.cache/compile_simlib/questa} {riviera=F:/TowerSketch/WowerSketch.cache/compile_simlib/riviera} {activehdl=F:/TowerSketch/WowerSketch.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+export_ip_user_files -of_objects  [get_files f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_32_16384/ram_32_16384.xci] -no_script -reset -force -quiet
+remove_files  f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_32_16384/ram_32_16384.xci
+file delete -force f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_32_16384
+export_ip_user_files -of_objects  [get_files f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_16_31768/ram_16_31768.xci] -no_script -reset -force -quiet
+remove_files  f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_16_31768/ram_16_31768.xci
+file delete -force f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_16_31768
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name ram_16_32k -dir f:/TowerSketch/WowerSketch.srcs/sources_1/ip
+set_property -dict [list CONFIG.Component_Name {ram_16_32k} CONFIG.Memory_Type {True_Dual_Port_RAM} CONFIG.Write_Depth_A {32768} CONFIG.Enable_B {Use_ENB_Pin} CONFIG.Register_PortB_Output_of_Memory_Primitives {true} CONFIG.Port_B_Clock {100} CONFIG.Port_B_Write_Rate {50} CONFIG.Port_B_Enable_Rate {100}] [get_ips ram_16_32k]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ram_16_32k' to 'ram_16_32k' is not allowed and is ignored.
+generate_target {instantiation_template} [get_files f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_16_32k/ram_16_32k.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ram_16_32k'...
+set_property generate_synth_checkpoint false [get_files  f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_16_32k/ram_16_32k.xci]
+generate_target all [get_files  f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_16_32k/ram_16_32k.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ram_16_32k'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ram_16_32k'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ram_16_32k'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'ram_16_32k'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ram_16_32k'...
+export_ip_user_files -of_objects [get_files f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_16_32k/ram_16_32k.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_16_32k/ram_16_32k.xci] -directory F:/TowerSketch/WowerSketch.ip_user_files/sim_scripts -ip_user_files_dir F:/TowerSketch/WowerSketch.ip_user_files -ipstatic_source_dir F:/TowerSketch/WowerSketch.ip_user_files/ipstatic -lib_map_path [list {modelsim=F:/TowerSketch/WowerSketch.cache/compile_simlib/modelsim} {questa=F:/TowerSketch/WowerSketch.cache/compile_simlib/questa} {riviera=F:/TowerSketch/WowerSketch.cache/compile_simlib/riviera} {activehdl=F:/TowerSketch/WowerSketch.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+create_ip -name blk_mem_gen -vendor xilinx.com -library ip -version 8.4 -module_name ram_32_16k -dir f:/TowerSketch/WowerSketch.srcs/sources_1/ip
+set_property -dict [list CONFIG.Component_Name {ram_32_16k} CONFIG.Memory_Type {True_Dual_Port_RAM} CONFIG.Write_Width_A {32} CONFIG.Write_Depth_A {16384} CONFIG.Read_Width_A {32} CONFIG.Write_Width_B {32} CONFIG.Read_Width_B {32} CONFIG.Enable_B {Use_ENB_Pin} CONFIG.Register_PortB_Output_of_Memory_Primitives {true} CONFIG.Port_B_Clock {100} CONFIG.Port_B_Write_Rate {50} CONFIG.Port_B_Enable_Rate {100}] [get_ips ram_32_16k]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'ram_32_16k' to 'ram_32_16k' is not allowed and is ignored.
+generate_target {instantiation_template} [get_files f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_32_16k/ram_32_16k.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ram_32_16k'...
+set_property generate_synth_checkpoint false [get_files  f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_32_16k/ram_32_16k.xci]
+generate_target all [get_files  f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_32_16k/ram_32_16k.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ram_32_16k'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ram_32_16k'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ram_32_16k'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'ram_32_16k'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ram_32_16k'...
+export_ip_user_files -of_objects [get_files f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_32_16k/ram_32_16k.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files f:/TowerSketch/WowerSketch.srcs/sources_1/ip/ram_32_16k/ram_32_16k.xci] -directory F:/TowerSketch/WowerSketch.ip_user_files/sim_scripts -ip_user_files_dir F:/TowerSketch/WowerSketch.ip_user_files -ipstatic_source_dir F:/TowerSketch/WowerSketch.ip_user_files/ipstatic -lib_map_path [list {modelsim=F:/TowerSketch/WowerSketch.cache/compile_simlib/modelsim} {questa=F:/TowerSketch/WowerSketch.cache/compile_simlib/questa} {riviera=F:/TowerSketch/WowerSketch.cache/compile_simlib/riviera} {activehdl=F:/TowerSketch/WowerSketch.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+reset_run synth_2
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Couldn't access process for termination
+
+launch_runs synth_2 -jobs 4
+[Wed Jan  6 10:51:11 2021] Launched synth_2...
+Run output will be captured here: F:/TowerSketch/WowerSketch.runs/synth_2/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 1339.504 ; gain = 8.707
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jan  6 10:51:32 2021...
