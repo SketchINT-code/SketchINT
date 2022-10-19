@@ -15,7 +15,7 @@
 #include "BOBHash32.h"
 using namespace std;
 
-#define REP_TIME 10
+#define REP_TIME 100
 #define INF 1000000000
 #define MAX_FLOW_SIZE 1000000
 //#define DEBUG_MODE

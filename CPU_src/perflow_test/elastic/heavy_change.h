@@ -10,6 +10,7 @@ using namespace std;
  * To test the performance (F_1 Score) of elastic sketch over reporting heavy change flows.
  * Here, "heavy change flows" are defined as: {e_i| |f_i - f'_i| >= total * threshold}
  */
+template <int memory>
 void heavy_change_test(TRACE* traces, FLOW_ITEM* items, int item_cnt, int sketch_id, int opt, int threshold, FILE* output_file, char* extra_file_name){
     double avg_PR = 0;
     double avg_RC = 0;
@@ -28,11 +29,11 @@ void heavy_change_test(TRACE* traces, FLOW_ITEM* items, int item_cnt, int sketch
 
     for (int rep = 0; rep < REP_TIME; rep++){
         printf("%d\n", rep);
-        ElasticSketch<MEMORY / 256, MEMORY>* sketch = new ElasticSketch<MEMORY / 256, MEMORY>();
+        ElasticSketch<memory / 256, memory>* sketch = new ElasticSketch<memory / 256, memory>();
 
         insert_all_packets(sketch, traces);
         
-        ElasticSketch<MEMORY / 256, MEMORY>* sketch2 = new ElasticSketch<MEMORY / 256, MEMORY>();
+        ElasticSketch<memory / 256, memory>* sketch2 = new ElasticSketch<memory / 256, memory>();
 
         insert_all_packets(sketch2, traces2);
 

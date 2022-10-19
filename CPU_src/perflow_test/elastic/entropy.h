@@ -9,6 +9,7 @@ using namespace std;
 /*
  * To test the performance (Relative Error) of elastic sketch over measuring the entropy of flows.
  */
+template <int memory>
 void entropy_test(TRACE* traces, FLOW_ITEM* items, int item_cnt, int sketch_id, int opt, FILE* output_file){
     double avg_RE = 0;
     char sketch_name[100];
@@ -17,7 +18,7 @@ void entropy_test(TRACE* traces, FLOW_ITEM* items, int item_cnt, int sketch_id, 
 
     for (int rep = 0; rep < REP_TIME; rep++){
         printf("%d\n", rep);
-        ElasticSketch<MEMORY / 256, MEMORY>* sketch = new ElasticSketch<MEMORY / 256, MEMORY>;
+        ElasticSketch<memory / 256, memory>* sketch = new ElasticSketch<memory / 256, memory>;
 
         insert_all_packets(sketch, traces);
 

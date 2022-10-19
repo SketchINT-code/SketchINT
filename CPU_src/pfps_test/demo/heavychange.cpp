@@ -34,7 +34,7 @@ void ReadInTraces(const char* filename, uint32_t no, uint32_t window_no)
 	printf("Successfully read in %s, %ld packets\n", filename, traces[window_no][no].size());
 }
 
-double HCTest(uint32_t mem_in_byte)
+double HCTest(uint32_t mem_in_byte,int sketch_id)
 {
 	int seed = rand() % 750;
 	HostSketches sketch[2][ENO - SNO + 1];
@@ -44,7 +44,7 @@ double HCTest(uint32_t mem_in_byte)
 	{
 		for (int window_no = 0; window_no < 2; ++window_no)
 		{
-			sketch[window_no][no].init(mem_in_byte, SW_NUM, HEAVYCHANGE, seed);
+			sketch[window_no][no].init(mem_in_byte, SW_NUM, HEAVYCHANGE, seed,sketch_id);
 			sketch[window_no][no].ehn = no;
 			for (int i = 0; i < traces[window_no][no].size(); ++i)
 			{
@@ -68,24 +68,32 @@ int main()
 	char filename[80];
 	for (uint32_t no = SNO; no <= ENO; ++no)
 	{
-		sprintf(filename, "dataset directory/window0/%d.bin", no);
+		sprintf(filename, "/root/SketchINT/CPU_src/pfps_test/data/windows0/%d.bin", no);
 		ReadInTraces(filename, no - SNO, 0);
 	}
 	for (uint32_t no = SNO; no <= ENO; ++no)
 	{
-		sprintf(filename, "dataset directory/window1/%d.bin", no);
+		sprintf(filename, "/root/SketchINT/CPU_src/pfps_test/data/windows1/%d.bin", no);
 		ReadInTraces(filename, no - SNO, 1);
 	}
 
 	srand((unsigned)time(NULL));
-	printf("memory\tF1-score\n");
+	FILE *file_out = fopen("result_heavy_change.txt", "w");
 	for (uint32_t mem_in_byte = (10 << 10); mem_in_byte <= (60 << 10); mem_in_byte += (10 << 10))
 	{
-		double F1 = 0;
-		for (int i = 0; i < 10; i++)
-			F1 += HCTest(mem_in_byte);
-		F1 /= 10;
-		cout << mem_in_byte / (1 << 10) << "KB\t" << F1 << endl;
+		for (int sketch_id = 0; sketch_id < 5; ++sketch_id)
+        {
+            double F1 = 0;
+            for (int i = 0; i < 10; i++)
+                F1 += HCTest(mem_in_byte, sketch_id);
+            F1 /= 10;
+            char name[50];
+            get_sketch_name(name, sketch_id);
+            fprintf(file_out, "%s\n", name);
+            fprintf(file_out, "%lf\n", F1);
+            printf("%s\n", name);
+            printf("%lf\n", F1);
+        }
 	}
 	return 0;
 }

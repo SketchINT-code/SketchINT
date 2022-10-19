@@ -111,4 +111,33 @@ public:
 	}
 };
 
+class TowerSketchACU : public TowerSketch
+{
+public:
+	TowerSketchACU() {}
+	TowerSketchACU(uint32_t w_d) { init(w_d); }
+	~TowerSketchACU() {}
+
+	void insert(const char* key, uint16_t key_len)
+	{
+		int idx[d], mtx_id = 0;
+		for (int i = 0; i < d; ++i)
+		{
+			idx[i] = MurmurHash3_x86_32(key, key_len, hashseed[i]) % w[i];
+			mtx_id = (mtx_id << mtx_shift) | (idx[i] >> cpw[i] & mtx_mask);
+		}
+		uint32_t min_val = UINT32_MAX;
+		mtx[mtx_id].lock();
+		for (int i = 0; i < d; ++i)
+		{
+			uint32_t &a = A[i][idx[i] >> cpw[i]];
+			uint32_t shift = (idx[i] & lo[i]) << cs[i];
+			uint32_t val = (a >> shift) & mask[i];
+			min_val = (val < mask[i] && val < min_val) ? val : min_val;
+            a += (val < mask[i] && val == min_val) ? (1 << shift) : 0;
+		}
+		mtx[mtx_id].unlock();
+	}
+};
+
 #endif
