@@ -99,6 +99,7 @@ TowerSketch *create_sketch(uint32_t mem_in_byte, uint32_t h, uint32_t seed_num, 
     return sketch;
 }
 
+
 class HostSketches
 {
 private:
