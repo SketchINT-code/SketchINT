@@ -79,7 +79,7 @@ int main()
             printf("%d\n", tmp_item_cnt);
         }
 
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 8; i++)
         {
             if (task_id != 6)
                 main_task(traces, items, item_cnt, memory, task_id, i, output_file, extra_trace_file_name);

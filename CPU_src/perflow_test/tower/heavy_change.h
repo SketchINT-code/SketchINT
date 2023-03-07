@@ -1,34 +1,18 @@
 #ifndef HEAVY_CHANGE_H
 #define HEAVY_CHANEG_H
 
+#include <mutex>
+#include <thread>
+
 #include "utils.h"
 #include "tower.h"
 #include "data.h"
 #include "task_utils.h"
 using namespace std;
 
-/*
- * To test the performance (F_1 Score) of tower+CM/tower+CU/CM/CU over reporting heavy change flows.
- * Here, "heavy change flows" are defined as: {e_i| |f_i - f'_i| >= total * threshold}
- */
-void heavy_change_test(TRACE* traces, FLOW_ITEM* items, int item_cnt, int memory, int sketch_id, int opt, int threshold, FILE* output_file, char* extra_file_name){
-    double avg_PR = 0;
-    double avg_RC = 0;
-    double avg_ARE = 0;
-    double avg_F1 = 0;
-
-    char sketch_name[100];
-    get_sketch_name(sketch_name, sketch_id);
-    printf("%s\n", sketch_name);
-
-    TRACE* traces2;
-    FLOW_ITEM* items2;
-    int item_cnt2;
-
-    ReadInTraces(extra_file_name, traces2, items2, item_cnt2);
-
-    for (int rep = 0; rep < REP_TIME; rep++){
-        printf("%d\n", rep);
+void heavy_change_run(mutex *mtx, int rep_time, TRACE *traces, FLOW_ITEM *items, int item_cnt, TRACE *traces2, FLOW_ITEM *items2, int item_cnt2, int memory, int sketch_id, int opt, int threshold, int thread_id, double *avg_PR, double *avg_RC, double *avg_ARE, double *avg_F1) {
+    for (int rep = 0; rep < rep_time; rep++){
+        printf("%d %d\n", thread_id, rep);
         TowerSketch* sketch;
         sketch = create_sketch(memory, opt, threshold, sketch_id);
 
@@ -83,10 +67,12 @@ void heavy_change_test(TRACE* traces, FLOW_ITEM* items, int item_cnt, int memory
             }
         }
 
-        avg_PR += (double)(hit) / (double)tot_report / (double)REP_TIME;
-        avg_RC += (double)(hit) / (double)tot_real / (double)REP_TIME;
-        avg_ARE += ARE / (double)REP_TIME / (double)hit;
-        avg_F1 += 2 * (double)hit / (double)(tot_report + tot_real) / (double)REP_TIME;
+        mtx->lock();
+        *avg_PR += (double)(hit) / (double)tot_report / (double)REP_TIME;
+        *avg_RC += (double)(hit) / (double)tot_real / (double)REP_TIME;
+        *avg_ARE += ARE / (double)REP_TIME / (double)hit;
+        *avg_F1 += 2 * (double)hit / (double)(tot_report + tot_real) / (double)REP_TIME;
+        mtx->unlock();
 
         delete(sketch);
         delete(result);
@@ -95,6 +81,36 @@ void heavy_change_test(TRACE* traces, FLOW_ITEM* items, int item_cnt, int memory
         delete(answer);
         delete(result1);
     }
+}
+
+/*
+ * To test the performance (F_1 Score) of tower+CM/tower+CU/CM/CU over reporting heavy change flows.
+ * Here, "heavy change flows" are defined as: {e_i| |f_i - f'_i| >= total * threshold}
+ */
+void heavy_change_test(TRACE* traces, FLOW_ITEM* items, int item_cnt, int memory, int sketch_id, int opt, int threshold, FILE* output_file, char* extra_file_name){
+    double avg_PR = 0;
+    double avg_RC = 0;
+    double avg_ARE = 0;
+    double avg_F1 = 0;
+
+    char sketch_name[100];
+    get_sketch_name(sketch_name, sketch_id);
+    printf("%s\n", sketch_name);
+
+    TRACE* traces2;
+    FLOW_ITEM* items2;
+    int item_cnt2;
+
+    ReadInTraces(extra_file_name, traces2, items2, item_cnt2);
+
+    mutex mtx;
+    thread threads[THREAD_NUM];
+    for (int i = 0; i < THREAD_NUM; ++i)
+    {
+        threads[i] = thread(heavy_change_run, &mtx, REP_TIME / THREAD_NUM, traces, items, item_cnt, traces2, items2, item_cnt2, memory, sketch_id, opt, threshold, i, &avg_PR, &avg_RC, &avg_ARE, &avg_F1);
+    }
+    for (int i = 0; i < THREAD_NUM; ++i)
+        threads[i].join();
 
     printf("\n");
     fprintf(output_file, "%s\n%.9f %.9f %.9f %.9f\n", sketch_name, avg_PR, avg_RC, avg_F1, avg_ARE);

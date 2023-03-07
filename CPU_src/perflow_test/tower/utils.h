@@ -15,6 +15,7 @@
 #include "BOBHash32.h"
 using namespace std;
 
+#define THREAD_NUM 10
 #define REP_TIME 100
 #define INF 1000000000
 #define MAX_FLOW_SIZE 1000000
@@ -86,5 +87,6 @@ vector<uint8_t> cs_cm = {32, 32, 32};
 
 vector<double> width_mul_tower = {0.8, 0.4, 0.2, 0.1, 0.05};
 vector<double> width_mul_cm = {1./12., 1./12., 1./12.};
+vector<double> width_mul_cm_tower = {4./31, 4./31, 4./31, 4./31, 4./31};
 
 #endif

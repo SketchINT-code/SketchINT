@@ -1,25 +1,19 @@
 #ifndef ENTROPY_H
 #define ENTROPY_H
 
+#include <mutex>
+#include <thread>
+
 #include "utils.h"
 #include "tower.h"
 #include "data.h"
 #include "task_utils.h"
 using namespace std;
 
-/*
- * To test the performance (Relative Error) of tower+CM/tower+CU/CM/CU over measuring the entropy of flows.
- */
-void entropy_test(TRACE *traces, FLOW_ITEM *items, int item_cnt, int memory, int sketch_id, int opt, FILE *output_file)
-{
-    double avg_RE = 0;
-    char sketch_name[100];
-    get_sketch_name(sketch_name, sketch_id);
-    printf("%s\n", sketch_name);
-
-    for (int rep = 0; rep < REP_TIME; rep++)
+void entropy_run(mutex *mtx, int rep_time, TRACE *traces, FLOW_ITEM *items, int item_cnt, int memory, int sketch_id, int opt, int thread_id, double *avg_RE) {
+    for (int rep = 0; rep < rep_time; rep++)
     {
-        printf("%d\n", rep);
+        printf("%d %d\n", thread_id, rep);
         TowerSketch *sketch;
         sketch = create_sketch(memory, opt, 0, sketch_id);
 
@@ -101,10 +95,32 @@ void entropy_test(TRACE *traces, FLOW_ITEM *items, int item_cnt, int memory, int
             real_entro += -real_distri[i] * i / M * log(i / M);
         */
 
-        avg_RE += fabs(est_entro - real_entro) / real_entro / (double)REP_TIME;
+        mtx->lock();
+        *avg_RE += fabs(est_entro - real_entro) / real_entro / (double)REP_TIME;
+        mtx->unlock();
 
         delete (sketch);
     }
+}
+
+/*
+ * To test the performance (Relative Error) of tower+CM/tower+CU/CM/CU over measuring the entropy of flows.
+ */
+void entropy_test(TRACE *traces, FLOW_ITEM *items, int item_cnt, int memory, int sketch_id, int opt, FILE *output_file)
+{
+    double avg_RE = 0;
+    char sketch_name[100];
+    get_sketch_name(sketch_name, sketch_id);
+    printf("%s\n", sketch_name);
+
+    mutex mtx;
+    thread threads[THREAD_NUM];
+    for (int i = 0; i < THREAD_NUM; ++i)
+    {
+        threads[i] = thread(entropy_run, &mtx, REP_TIME / THREAD_NUM, traces, items, item_cnt, memory, sketch_id, opt, i, &avg_RE);
+    }
+    for (int i = 0; i < THREAD_NUM; ++i)
+        threads[i].join();
 
     printf("\n");
     fprintf(output_file, "%s\n%.9f\n", sketch_name, avg_RE);

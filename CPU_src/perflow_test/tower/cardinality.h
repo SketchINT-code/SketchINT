@@ -1,25 +1,20 @@
 #ifndef CARDINALITY_H
 #define CARDINALITY_H
 
+#include <mutex>
+#include <thread>
+
 #include "utils.h"
 #include "tower.h"
 #include "data.h"
 #include "task_utils.h"
 using namespace std;
 
-/*
- * To test the performance (Relative Error) of tower+CM/tower+CU/CM/CU over measuring the cardinality of a stream of flows.
- */
-void cardinality_test(TRACE *traces, FLOW_ITEM *items, int item_cnt, int memory, int sketch_id, int opt, FILE *output_file)
+void cardinality_run(mutex *mtx, int rep_time, TRACE *traces, FLOW_ITEM *items, int item_cnt, int memory, int sketch_id, int opt, int thread_id, double *avg_RE)
 {
-    double avg_RE = 0;
-    char sketch_name[100];
-    get_sketch_name(sketch_name, sketch_id);
-    printf("%s\n", sketch_name);
-
-    for (int rep = 0; rep < REP_TIME; rep++)
+    for (int rep = 0; rep < rep_time; rep++)
     {
-        printf("%d\n", rep);
+        printf("%d %d\n", thread_id, rep);
         TowerSketch *sketch;
         sketch = create_sketch(memory, opt, 0, sketch_id);
 
@@ -40,10 +35,32 @@ void cardinality_test(TRACE *traces, FLOW_ITEM *items, int item_cnt, int memory,
         }
 
         printf("%d %d\n", item_cnt, cardinality);
-        avg_RE += fabs(item_cnt - cardinality) / (double)item_cnt / (double)REP_TIME;
+        mtx->lock();
+        *avg_RE += fabs(item_cnt - cardinality) / (double)item_cnt / (double)REP_TIME;
+        mtx->unlock();
 
         delete (sketch);
     }
+}
+
+/*
+ * To test the performance (Relative Error) of tower+CM/tower+CU/CM/CU over measuring the cardinality of a stream of flows.
+ */
+void cardinality_test(TRACE *traces, FLOW_ITEM *items, int item_cnt, int memory, int sketch_id, int opt, FILE *output_file)
+{
+    double avg_RE = 0;
+    char sketch_name[100];
+    get_sketch_name(sketch_name, sketch_id);
+    printf("%s\n", sketch_name);
+
+    mutex mtx;
+    thread threads[THREAD_NUM];
+    for (int i = 0; i < THREAD_NUM; ++i)
+    {
+        threads[i] = thread(cardinality_run, &mtx, REP_TIME / THREAD_NUM, traces, items, item_cnt, memory, sketch_id, opt, i, &avg_RE);
+    }
+    for (int i = 0; i < THREAD_NUM; ++i)
+        threads[i].join();
 
     fprintf(output_file, "%s\n%.9f\n", sketch_name, avg_RE);
 }

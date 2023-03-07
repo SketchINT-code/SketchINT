@@ -1,25 +1,19 @@
 #ifndef DISTRIBUTION_H
 #define DISTRIBUTION_H
 
+#include <mutex>
+#include <thread>
+
 #include "utils.h"
 #include "tower.h"
 #include "data.h"
 #include "task_utils.h"
 using namespace std;
 
-/*
- * To test the performance (WMRE) of tower+CM/tower+CU/CM/CU over measuring the distribution of a stream of flows.
- */
-void distribution_test(TRACE *traces, FLOW_ITEM *items, int item_cnt, int memory, int sketch_id, int opt, FILE *output_file)
-{
-    double avg_WMRE = 0;
-    char sketch_name[100];
-    get_sketch_name(sketch_name, sketch_id);
-    printf("%s\n", sketch_name);
-
-    for (int rep = 0; rep < REP_TIME; rep++)
+void distribution_run(mutex *mtx, int rep_time, TRACE *traces, FLOW_ITEM *items, int item_cnt, int memory, int sketch_id, int opt, int thread_id, double *avg_WMRE) {
+    for (int rep = 0; rep < rep_time; rep++)
     {
-        printf("%d\n", rep);
+        printf("%d %d\n", thread_id, rep);
         TowerSketch *sketch;
         sketch = create_sketch(memory, opt, 0, sketch_id);
 
@@ -85,31 +79,37 @@ void distribution_test(TRACE *traces, FLOW_ITEM *items, int item_cnt, int memory
             cur_sum += result_distri[i];
         }
 
-        /*
-        FILE *tmp = fopen("result_dis.txt", "a");
-        fprintf(tmp, "%s\n", sketch_name);
-        for (int i = 0; i <= 2 * items[0].freq; i++)
-        {
-            fprintf(tmp, "%lf ", result_distri[i]);
-        }
-        fprintf(tmp, "\n");
-        for (int i = 0; i <= 2 * items[0].freq; i++)
-        {
-            fprintf(tmp, "%d ", real_distri[i]);
-        }
-        fprintf(tmp, "\n");
-        fclose(tmp);
-        */
-
         // printf("%f\n", WMRE);
         WMRE /= (double)(cur_sum + item_cnt) / 2.0;
 
-        avg_WMRE += WMRE / (double)REP_TIME;
+        mtx->lock();
+        *avg_WMRE += WMRE / (double)REP_TIME;
+        mtx->unlock();
 
         delete (sketch);
         delete[] result_distri;
         delete[] real_distri;
     }
+}
+
+/*
+ * To test the performance (WMRE) of tower+CM/tower+CU/CM/CU over measuring the distribution of a stream of flows.
+ */
+void distribution_test(TRACE *traces, FLOW_ITEM *items, int item_cnt, int memory, int sketch_id, int opt, FILE *output_file)
+{
+    double avg_WMRE = 0;
+    char sketch_name[100];
+    get_sketch_name(sketch_name, sketch_id);
+    printf("%s\n", sketch_name);
+
+    mutex mtx;
+    thread threads[THREAD_NUM];
+    for (int i = 0; i < THREAD_NUM; ++i)
+    {
+        threads[i] = thread(distribution_run, &mtx, REP_TIME / THREAD_NUM, traces, items, item_cnt, memory, sketch_id, opt, i, &avg_WMRE);
+    }
+    for (int i = 0; i < THREAD_NUM; ++i)
+        threads[i].join();
 
     printf("\n");
     fprintf(output_file, "%s\n%.9f\n", sketch_name, avg_WMRE);

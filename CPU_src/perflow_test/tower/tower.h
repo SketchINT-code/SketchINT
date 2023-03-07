@@ -442,4 +442,73 @@ public:
     }
 };
 
+class CMTowerSketch : public TowerSketch
+{
+public:
+    CMTowerSketch() {}
+    CMTowerSketch(vector<uint32_t> &w, uint32_t h, vector<uint8_t> &cs, int _opt, int _threshold = 0) : TowerSketch(w, h, cs, _opt, _threshold) {}
+
+    virtual void insert(const char *key, uint16_t key_len, uint32_t row_id, uint32_t f = 1)
+    {
+        int pre_freq = 0;
+        if (opt)
+        {
+            pre_freq = query(key, key_len, row_id);
+        }
+
+        tot_packets += f;
+
+        for (uint8_t i_level = 0; i_level < level; ++i_level)
+            mat[i_level].insert(key, key_len, row_id, f);
+
+        if (opt)
+        {
+            task_record(key, key_len, row_id, pre_freq);
+        }
+    }
+};
+
+class CUTowerSketch : public TowerSketch
+{
+public:
+    CUTowerSketch() {}
+    CUTowerSketch(vector<uint32_t> &w, uint32_t h, vector<uint8_t> &cs, int _opt, int _threshold = 0) : TowerSketch(w, h, cs, _opt, _threshold) {}
+
+    virtual void insert(const char *key, uint16_t key_len, uint32_t row_id, uint32_t f = 1)
+    {
+        int pre_freq = 0;
+        if (opt)
+        {
+            pre_freq = query(key, key_len, row_id);
+        }
+
+        tot_packets += f;
+
+        uint32_t min_val = UINT32_MAX;
+        vector<uint32_t> ret_val(level);
+
+        uint32_t hash_value[10];
+        for (uint8_t i_level = 0; i_level < level; i_level++)
+        {
+            hash_value[i_level] = mat[i_level].hash->run(key, key_len);
+        }
+
+        for (uint8_t i_level = 0; i_level < level; ++i_level)
+        {
+            ret_val[i_level] = mat[i_level].query_with_hash_value(key, key_len, row_id, hash_value[i_level]);
+            if (ret_val[i_level] < mat[i_level].counter_max)
+                min_val = min(min_val, ret_val[i_level]);
+        }
+        min_val += f;
+        for (uint8_t i_level = 0; i_level < level; ++i_level)
+            if (ret_val[i_level] < min_val)
+                mat[i_level].insert_with_hash_value(key, key_len, row_id, hash_value[i_level], min_val - ret_val[i_level]);
+
+        if (opt)
+        {
+            task_record(key, key_len, row_id, pre_freq);
+        }
+    }
+};
+
 #endif
