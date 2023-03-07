@@ -2,9 +2,9 @@
 
 ## Introduction
 
-For traditional per-flow tasks, we test the performance of our Tower, Tower+CU against CM, CU, and Elastic, on six tasks: flow size estimation, heavy hitter detection, heavy change detection, flow size distribution, entropy estimation, and cardinality estimation. And we test the performance of NitroSketch and UnivMon on the first four tasks. Specifically:
+For traditional per-flow tasks, we test the performance of our Tower, Tower+CU against CM, CU, CM(O), CU(O), Elastic, UnivMon, NitroSketch on six tasks: flow size estimation, heavy hitter detection, heavy change detection, flow size distribution, entropy estimation, and cardinality estimation. And we test the performance of NitroSketch and UnivMon on the first four tasks. Specifically:
 
-- The `./tower/` directory contains all the tests of Tower, Tower+CU, CM and CU. We implemented our Tower's data structure and query operations in `tower.h`, and since CM and CU share similar data structures and operations with Tower, we combine the implementations of CM and CU into `tower.h`.
+- The `./tower/` directory contains all the tests of Tower, Tower+CU, CM and CU, CM(O), and CU(O). We implemented our Tower's data structure and query operations in `tower.h`, and since CM/CM(O) and CU/CU(O) share similar data structures and operations with Tower, we integrate their implementations into `tower.h`.
 - The `./elastic/` directory contains all the tests of Elastic.
 - The `./NitroSketch/` directory contains all the tests of NitroSketch.
 - The `./UnivMon/` directory contains all the tests of UnivMon.
@@ -22,7 +22,7 @@ Before running the demo, please download the dataset and put them into the `../.
 
 ## How to make and run the test
 
-- Compilations: To compile test codes of Tower, Tower+CU, or CM, CU, just run: 
+- Compilations: To compile test codes of Tower, Tower+CU, or CM/CM(O), CU/CU(O), just run: 
 
   ```shell
   cd tower
